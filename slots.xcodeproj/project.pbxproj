@@ -13,6 +13,7 @@
 		B8AA0CCC24D894A600F2B712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8AA0CCB24D894A600F2B712 /* Assets.xcassets */; };
 		B8AA0CCF24D894A600F2B712 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8AA0CCE24D894A600F2B712 /* Preview Assets.xcassets */; };
 		B8AA0CD224D894A600F2B712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8AA0CD024D894A600F2B712 /* LaunchScreen.storyboard */; };
+		B8AA0CDC24D8B04800F2B712 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA0CDB24D8B04800F2B712 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B8AA0CCE24D894A600F2B712 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B8AA0CD124D894A600F2B712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8AA0CD324D894A600F2B712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8AA0CDB24D8B04800F2B712 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				B8AA0CC524D894A400F2B712 /* AppDelegate.swift */,
 				B8AA0CC724D894A400F2B712 /* SceneDelegate.swift */,
+				B8AA0CDB24D8B04800F2B712 /* CardView.swift */,
 				B8AA0CC924D894A400F2B712 /* ContentView.swift */,
 				B8AA0CCB24D894A600F2B712 /* Assets.xcassets */,
 				B8AA0CD024D894A600F2B712 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 			files = (
 				B8AA0CC624D894A400F2B712 /* AppDelegate.swift in Sources */,
 				B8AA0CC824D894A400F2B712 /* SceneDelegate.swift in Sources */,
+				B8AA0CDC24D8B04800F2B712 /* CardView.swift in Sources */,
 				B8AA0CCA24D894A400F2B712 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

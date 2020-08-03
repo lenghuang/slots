@@ -9,13 +9,21 @@
 import SwiftUI
 
 struct CardView: View {
+    
+    @Binding var symbol:String
+    @Binding var background:Color
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(symbol)
+            .resizable()
+            .aspectRatio(1, contentMode: .fit)
+            .background(background.opacity(0.5))
+            .cornerRadius(20)
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        CardView(symbol: Binding.constant("donut"), background: Binding.constant(Color.green))
     }
 }
