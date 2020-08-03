@@ -16,20 +16,24 @@ struct ContentView: View {
     @State private var symbols = ["apple", "lemon", "donut"]
     private var betAmount = 5
     
-    private var myOrange = Color(red:200/255, green: 143/255, blue: 32/255)
-    private var myYellow = Color(red: 228/255, green: 195/255, blue: 76/255)
+    public var secondary = Color(red:0, green: 0, blue: 40/255)
+    public var primary = Color(.black)
+    public var width = CGFloat(75)
     
     var body: some View {
         ZStack {
             // Background
-            Rectangle().foregroundColor(myOrange).edgesIgnoringSafeArea(.all)
-            Rectangle().foregroundColor(myYellow).rotationEffect(Angle(degrees: 45)).edgesIgnoringSafeArea(.all)
+            Rectangle().foregroundColor(primary).edgesIgnoringSafeArea(.all)
+            Rectangle().foregroundColor(secondary).rotationEffect(Angle(degrees: 45)).frame(width: width).edgesIgnoringSafeArea(.all)
+           Rectangle().foregroundColor(secondary).rotationEffect(Angle(degrees: 90)).frame(width: width).edgesIgnoringSafeArea(.all)
+            Rectangle().foregroundColor(secondary).rotationEffect(Angle(degrees: 135)).frame(width: width).edgesIgnoringSafeArea(.all)
+            Rectangle().foregroundColor(secondary).rotationEffect(Angle(degrees: 180)).frame(width: width).edgesIgnoringSafeArea(.all)
             VStack {
                 Spacer()
                 // Title
                 HStack {
                     Image(systemName: "star.fill").foregroundColor(.yellow)
-                    Text("SwiftUI Slots").bold().foregroundColor(.white)
+                    Text("Tic Tac Slots").bold().foregroundColor(.white)
                     Image(systemName: "star.fill").foregroundColor(.yellow)
                     
                 }.scaleEffect(2)
@@ -40,14 +44,28 @@ struct ContentView: View {
                 Spacer()
                 // Cards
                 HStack {
-                    Spacer()
                     CardView(symbol: $symbols[numbers[0]],
                              background: $backgrounds[0])
                     CardView(symbol: $symbols[numbers[1]],
                              background: $backgrounds[1])
                     CardView(symbol: $symbols[numbers[2]],
                              background: $backgrounds[2])
-                    Spacer()
+                }
+                HStack {
+                    CardView(symbol: $symbols[numbers[0]],
+                             background: $backgrounds[0])
+                    CardView(symbol: $symbols[numbers[1]],
+                             background: $backgrounds[1])
+                    CardView(symbol: $symbols[numbers[2]],
+                             background: $backgrounds[2])
+                }
+                HStack {
+                    CardView(symbol: $symbols[numbers[0]],
+                             background: $backgrounds[0])
+                    CardView(symbol: $symbols[numbers[1]],
+                             background: $backgrounds[1])
+                    CardView(symbol: $symbols[numbers[2]],
+                             background: $backgrounds[2])
                 }
                 Spacer()
                 // Button
@@ -82,7 +100,8 @@ struct ContentView: View {
                         .background(Color.pink)
                         .cornerRadius(20)
                 }
-                Spacer()
+                .padding(.bottom, 20.0)
+
             }
         }
     }
